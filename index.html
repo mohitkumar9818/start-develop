@@ -3,37 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> SCRAP MARKET PRICES</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1> SCRAP MARKET PRICES</h1>
-    </header>
-    <main>
-        <section id="prices">
-            <h2>Current Prices</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Material</th>
-                        <th>Price (per kg)</th>
-                    </tr>
-                </thead>
-                <tbody id="price-table">
-                    <!-- Prices will be dynamically inserted here -->
-                </tbody>
-            </table>
-        </section>
-        <section id="price-chart">
-            <h2>Price Analysis</h2>
-            <canvas id="myChart"></canvas>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Scrap Market Prices</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
+    <h1>CURRENT GOLD RATE</h1>
+
+<div id="gold-rate">
+
+</div>
+<script>
+    let url='https://api.api-ninjas.com/v1/goldprice'
+   fetch(url,{
+    method: 'GET',
+    url: 'https://api.api-ninjas.com/v1/goldprice',
+    
+                headers: {
+                    "Content-Type": "application/json",
+                    'X-Api-Key': 'KUoXtqFv0m9aYopmHYrNlw==gAZcg7ddynXX4pb3'
+                }
+            })
+
+    
+    .then(response => response.json())
+                .then(data => {
+                    console.log('Data obtained: ', data)
+                   document.getElementById('gold-rate').innerHTML=`<h2>${data.price}</h2>`
+                })
+                
+
+
+</script>
 </body>
 </html>
