@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SCRAP MARKET PRICES</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1> SCRAP MARKET PRICES</h1>
+    </header>
+    <main>
+        <section id="prices">
+            <h2>Current Prices</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>Price (per kg)</th>
+                    </tr>
+                </thead>
+                <tbody id="price-table">
+                    <!-- Prices will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </section>
+        <section id="price-chart">
+            <h2>Price Analysis</h2>
+            <canvas id="myChart"></canvas>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Scrap Market Prices</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
